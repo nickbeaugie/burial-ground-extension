@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import { siteConfig } from "@/config/site";
+import { siteConfig, withBase } from "@/config/site";
 import Hero from "@/components/widgets/Hero.astro";
 import Features from "@/components/widgets/Features.astro";
 import devImg from "@/assets/images/dev_balanced.png";
@@ -30,7 +30,7 @@ const metadata = {
       },
       {
         text: "Our Services",
-        href: "/services",
+        href: withBase("/services/"),
         variant: "secondary",
         icon: "lucide:arrow-right",
         ariaLabel: "Learn more about our services",

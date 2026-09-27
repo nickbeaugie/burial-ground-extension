@@ -8,7 +8,7 @@ interface Props {
   ignoreTitleTemplate?: boolean;
 }
 
-import { siteConfig } from "@/config/site";
+import { siteConfig, withBase } from "@/config/site";
 
 const {
   title,
@@ -19,6 +19,7 @@ const {
 } = Astro.props;
 
 const ogImageSrc = typeof ogImage === "string" ? ogImage : ogImage.src;
+const ogImageUrl = new URL(withBase(ogImageSrc), siteConfig.url);
 
 const fullTitle =
   title && !ignoreTitleTemplate
@@ -31,7 +32,7 @@ const canonicalURL =
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/svg+xml" href={withBase("/favicon.svg")} />
 <link rel="canonical" href={canonicalURL} />
 <meta name="generator" content={Astro.generator} />
 
@@ -46,7 +47,7 @@ const canonicalURL =
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={fullTitle} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(ogImageSrc, siteConfig.url)} />
+<meta property="og:image" content={ogImageUrl} />
 <meta property="og:locale" content={siteConfig.locale} />
 
 <!-- Twitter -->
@@ -54,7 +55,7 @@ const canonicalURL =
 <meta property="twitter:url" content={Astro.url} />
 <meta property="twitter:title" content={fullTitle} />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(ogImageSrc, siteConfig.url)} />
+<meta property="twitter:image" content={ogImageUrl} />
 {
   siteConfig.twitter && (
     <meta property="twitter:creator" content={siteConfig.twitter} />

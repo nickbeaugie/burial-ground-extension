@@ -2,6 +2,7 @@
 import type { Page } from "astro";
 import type { CollectionEntry } from "astro:content";
 import { Icon } from "astro-icon/components";
+import { withBase } from "@/config/site";
 
 export interface Props {
   page: Page<CollectionEntry<"blog">>;
@@ -18,7 +19,7 @@ const { prev, next } = url;
     <div class:list={["flex justify-between mt-12", className]}>
       {prev ? (
         <a
-          href={prev}
+          href={withBase(prev.endsWith("/") ? prev : `${prev}/`)}
           class="inline-flex items-center px-4 py-2 text-sm font-medium text-muted-foreground bg-card border border-border rounded-lg hover:bg-muted hover:text-foreground transition-colors"
         >
           <Icon name="tabler:arrow-left" class="w-4 h-4 mr-2" />
@@ -32,7 +33,7 @@ const { prev, next } = url;
       </div>
       {next ? (
         <a
-          href={next}
+          href={withBase(next.endsWith("/") ? next : `${next}/`)}
           class="inline-flex items-center px-4 py-2 text-sm font-medium text-muted-foreground bg-card border border-border rounded-lg hover:bg-muted hover:text-foreground transition-colors"
         >
           Next

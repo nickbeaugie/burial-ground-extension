@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Hero from "@/components/widgets/Hero.astro";
+import { withBase } from "@/config/site";
 
 const metadata = {
   title: "404 - Page Not Found",
@@ -17,13 +18,13 @@ const metadata = {
       {
         variant: "primary",
         text: "Back to Home",
-        href: "/",
+        href: withBase("/"),
         icon: "lucide:home",
       },
       {
         variant: "secondary",
         text: "Contact",
-        href: "/contact",
+        href: withBase("/contact/"),
         icon: "lucide:phone",
       },
     ]}
