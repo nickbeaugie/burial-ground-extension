@@ -7,7 +7,10 @@ import remarkReadingTime from "remark-reading-time";
 
 export default defineConfig({
   site: "https://nickbeaugie.github.io",
-  base: "/burial-ground-extension",
+  base:
+    process.env.NODE_ENV === "development"
+      ? "/"
+      : "/burial-ground-extension",
   integrations: [sitemap(), icon(), mdx()],
   markdown: {
     remarkPlugins: [
