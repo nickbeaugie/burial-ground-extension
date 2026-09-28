@@ -1,17 +1,17 @@
 ---
-title: "Welcome to the New Blog"
-pubDate: "2026-01-19"
-description: "This is the first post on our new Astro-powered blog."
-author: "Angelo Pescetto"
+title: "Last Preparations before Planning"
+pubDate: "2026-09-28"
+description: "Getting ready to submit the planning application."
+author: "Nick Beaugié"
 category: "General"
-tags: ["welcome", "community", "astro"]
-image: "/blog/welcome.webp"
+tags: ["planning", "welcome"]
+image: "/blog/culvert-in-dry-weather.jpg"
 ---
 
 # Welcome!
 
-We are excited to launch our new blog. Here we will share updates, tutorials, and more.
+We are making the final preparations before submitting our application to Monmouthshire Council's Planning Department. It is the culmination of many years of work to get this far. There are many people for which we want to thank.
 
-## Why Astro?
+## The Beginnings
 
-Astro is fast, flexible, and perfect for content-driven websites like this blog.
+This project goes back ... blah blah.

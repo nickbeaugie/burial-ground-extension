@@ -3,51 +3,46 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getImage } from "astro:assets";
 import Content2 from "@/components/widgets/Content2.astro";
 import Values from "@/components/widgets/Values.astro";
-import aboutImage from "@/assets/images/about-office.webp";
+import aboutImage from "@/assets/images/st-michaels-front.jpeg";
 import { withBase } from "@/config/site";
 
 const metadata = {
   title: "About us",
   description:
-    "Learn more about our vision, values, and the team behind Astro Starter Pro.",
+    "Learn more about our vision for the burial ground extension in Tintern.",
 };
 
 const values = [
   {
-    title: "Innovation",
+    title: "Improved Public Path",
     description:
-      "Curabitur dignissim, felis non sollicitudin molestie, urna mauris pellentesque velit, ut eleifend.",
+      "Improve the public path alongside the river by reducing muddy sections and installing a public shelter for walkers.",
   },
   {
-    title: "Commitment",
+    title: "Upgrade Internal Paths",
     description:
-      "Aenean condimentum finibus mauris, a fermentum justo pan eget. Sed ultricies, neque quis.",
+      "Upgrade paths through the Churchyard to create accessible routes for funeral parties and members of the public",
   },
   {
-    title: "Quality",
+    title: "New Access",
     description:
-      "Donec sed orci tincidunt, aliquam nisl a, condimentum nunc. Nulla varius ex nec ante feugiat.",
+      "Create new access from the riverside path, allowing the public to enjoy new views and peaceful rest areas",
   },
   {
-    title: "Transparency",
+    title: "Better for Wildlife",
     description:
-      "Phasellus tristique, elit dapibus cursus facilisis, lorem augue fringilla nunc, vitae fermentum.",
+      "Add trees, hedging and planting to improve wildlife habitats and enhance the environment",
   },
   {
-    title: "Teamwork",
+    title: "Memorial Tree",
     description:
-      "In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et.",
-  },
-  {
-    title: "Excellence",
-    description:
-      "Fusce at massa nec sapien auctor gravida in in tellus. Vivamus a tristique metus, et molestie.",
+      "Install a freestanding, tree-shaped outdoor steel structure to attach messages on personalised memorial leaves.",
   },
 ];
 
 const optimizedImage = await getImage({
   src: aboutImage,
-  format: "webp",
+  format: "jpg",
 });
 ---
 
@@ -56,8 +51,7 @@ const optimizedImage = await getImage({
   <Content2
     title="Our Vision"
     description={[
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "The proposed burial ground extension will create a new area of peace and tranquillity beside the River Wye for villagers, walkers and the families of local people who have found their final resting place.",
     ]}
     tagline="About"
     image={aboutImage}
@@ -69,19 +63,12 @@ const optimizedImage = await getImage({
         variant: "primary",
         icon: "lucide:mail",
       },
-      {
-        text: "View Details",
-        href: "#",
-        variant: "secondary",
-        icon: "lucide:arrow-right",
-      },
     ]}
   />
   <Values
     items={values}
-    columns={3}
-    tagline="Our Values"
-    title="What Defines Us"
-    subtitle="Principles that guide our daily work"
+    columns={2}
+    tagline="The advantages"
+    title="Why do this?"
   />
 </BaseLayout>
