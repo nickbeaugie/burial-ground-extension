@@ -32,8 +32,8 @@ export const siteConfig = {
   },
   navLinks: [
     { text: "Home", href: withBase("/") },
-    { text: "About", href: withBase("/about/") },
-    // { text: "Services", href: withBase("/services/") },
+    { text: "The idea", href: withBase("/idea/") },
+    { text: "More Details", href: withBase("/more-details/") },
     // { text: "Pricing", href: withBase("/pricing/") },
     { text: "Blog", href: withBase("/blog/") },
     { text: "Contact", href: withBase("/contact/") },
