@@ -20,7 +20,7 @@ jobs:
 
       - name: Fetch and Save Data
         env:
-          GRAPH_TOKEN: ${{ secrets.GRAPH_TOKEN }}
+          GRAPH_TOKEN: ${{ github.token }}
         run: node .github/save_traffic.js
 
       - name: Commit and Push changes
