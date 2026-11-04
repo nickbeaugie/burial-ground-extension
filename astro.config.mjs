@@ -1,6 +1,7 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
+import { unified } from "@astrojs/markdown-remark";
 import tailwindcss from "@tailwindcss/vite";
 import icon from "astro-icon";
 import remarkReadingTime from "remark-reading-time";
@@ -13,15 +14,17 @@ export default defineConfig({
       : "/burial-ground-extension",
   integrations: [sitemap(), icon(), mdx()],
   markdown: {
-    remarkPlugins: [
-      remarkReadingTime,
-      () => {
-        return function (_tree, file) {
-          file.data.astro.frontmatter.minutesRead =
-            file.data.readingTime.minutes;
-        };
-      },
-    ],
+    processor: unified({
+      remarkPlugins: [
+        remarkReadingTime,
+        () => {
+          return function (_tree, file) {
+            file.data.astro.frontmatter.minutesRead =
+              file.data.readingTime.minutes;
+          };
+        },
+      ],
+    }),
   },
   i18n: {
     defaultLocale: "en",
