@@ -18,18 +18,11 @@ export const withBase = (path: string) => {
 export const siteConfig = {
   name: "Tintern Burial Extension",
   description:
-    "An Extension to the Burial Ground in Tintern, Monmouthshire, Wales.",
+    "A new facility for the village - an extension to the burial ground at St Michael's Church, Tintern, Monmouthshire, Wales.",
   url: "https://nickbeaugie.github.io/burial-ground-extension/",
   lang: "en",
-  locale: "en_US",
-  author: "Devgelo",
-  twitter: "@Devgelo",
+  locale: "en_GB",
   ogImage: ogImage,
-  socialLinks: {
-    twitter: "https://twitter.com",
-    github: "https://github.com/devgelo-labs/astro-starter-pro",
-    discord: "https://discord.com",
-  },
   navLinks: [
     { text: "Home", href: withBase("/") },
     { text: "The idea", href: withBase("/idea/") },

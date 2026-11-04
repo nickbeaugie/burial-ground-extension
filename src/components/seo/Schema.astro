@@ -24,11 +24,6 @@ if (type === "WebSite") {
     name: siteConfig.name,
     url: siteConfig.url,
     description: siteConfig.description,
-    author: {
-      "@type": "Person",
-      name: siteConfig.author,
-    },
-    sameAs: [siteConfig.socialLinks.twitter, siteConfig.socialLinks.github],
   };
 } else if (type === "BlogPosting") {
   schema = {

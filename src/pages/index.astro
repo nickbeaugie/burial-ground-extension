@@ -3,21 +3,20 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import { siteConfig, withBase } from "@/config/site";
 import Hero from "@/components/widgets/Hero.astro";
 const metadata = {
-  title: `${siteConfig.name} — The next step for your project`,
-  description:
-    "A modern and professional template for your web projects with Astro and Tailwind CSS. Boost your development with a solid foundation.",
+  title: `${siteConfig.name} — Home`,
+  description: `${siteConfig.description}`,
   ignoreTitleTemplate: true,
 };
 ---
 
 <BaseLayout {metadata}>
   <Hero
-    title={`More burial places for <br class="hidden md:block" />Tintern`}
+    title={`Tintern Burial Ground Extension.`}
     description={`${siteConfig.description}`}
     actions={[
       {
-        text: "The Plan",
-        href: withBase("/about/"),
+        text: "The Idea",
+        href: withBase("/idea"),
         variant: "primary",
         icon: "lucide:arrow-right",
         ariaLabel: "Learn more about the plan",
