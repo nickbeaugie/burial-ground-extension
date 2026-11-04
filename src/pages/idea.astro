@@ -3,7 +3,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getImage } from "astro:assets";
 import Content2 from "@/components/widgets/Content2.astro";
 import Values from "@/components/widgets/Values.astro";
-import aboutImage from "@/assets/images/st-michaels-front.jpeg";
+import ideaImage from "@/assets/images/st-michaels-front.jpeg";
 import { withBase } from "@/config/site";
 
 const metadata = {
@@ -41,7 +41,7 @@ const values = [
 ];
 
 const optimizedImage = await getImage({
-  src: aboutImage,
+  src: ideaImage,
   format: "jpg",
 });
 ---
@@ -49,13 +49,12 @@ const optimizedImage = await getImage({
 <BaseLayout {metadata}>
   <link slot="head" rel="preload" href={optimizedImage.src} as="image" />
   <Content2
-    title="Our Vision"
+    title="The Idea"
     description={[
       "The proposed burial ground extension will create a new area of peace and tranquillity beside the River Wye for villagers, walkers and the families of local people who have found their final resting place.",
     ]}
-    tagline="About"
-    image={aboutImage}
-    imageAlt="Modern web development office"
+    image={ideaImage}
+    imageAlt="St Michael's Church"
     actions={[
       {
         text: "Contact Us",
@@ -65,10 +64,5 @@ const optimizedImage = await getImage({
       },
     ]}
   />
-  <Values
-    items={values}
-    columns={2}
-    tagline="The advantages"
-    title="Why do this?"
-  />
+  <Values items={values} columns={2} title="Why do this?" />
 </BaseLayout>
