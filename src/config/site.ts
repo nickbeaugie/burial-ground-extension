@@ -27,17 +27,7 @@ export const siteConfig = {
     { text: "Home", href: withBase("/") },
     { text: "The idea", href: withBase("/idea/") },
     { text: "More Details", href: withBase("/more-details/") },
-    // { text: "Pricing", href: withBase("/pricing/") },
     { text: "Blog", href: withBase("/blog/") },
     { text: "Contact", href: withBase("/contact/") },
-    // { text: "Widgets", href: withBase("/widgets/") },
-    // {
-    //   text: "Templates",
-    //   href: withBase("/templates/"),
-    //   links: [
-    //     { text: "Personal Portfolio", href: withBase("/templates/portfolio/") },
-    //     { text: "SaaS Landing", href: withBase("/templates/saas/") },
-    //   ],
-    // },
   ],
 };
